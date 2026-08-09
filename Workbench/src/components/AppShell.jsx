@@ -6,6 +6,7 @@ import {
   IconBulb,
   IconClipboardList,
   IconCommand,
+  IconExternalLink,
   IconHome,
   IconLibrary,
   IconMenu2,
@@ -33,6 +34,14 @@ const primaryNavigation = [
   { to: "/topics", label: "灵感库", icon: IconBulb },
   { to: "/content", label: "内容中心", icon: IconClipboardList },
   { to: "/douyin", label: "抖音数据", icon: IconBrandTiktok },
+];
+
+const externalLinks = [
+  {
+    href: "https://nevilaa.github.io/",
+    label: "财报研究 · 思航",
+    icon: IconExternalLink,
+  },
 ];
 
 export function AppShell({ children, onOpenSearch, sync }) {
@@ -115,6 +124,26 @@ export function AppShell({ children, onOpenSearch, sync }) {
                   <Icon aria-hidden="true" className="sidebar__nav-icon" stroke={1.7} />
                   <span>{item.label}</span>
                 </NavLink>
+              );
+            })}
+          </nav>
+
+          <div className="sidebar__section-label">外部站点</div>
+          <nav aria-label="外部站点" className="sidebar__nav sidebar__nav--external">
+            {externalLinks.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  className="sidebar__nav-item"
+                  href={item.href}
+                  key={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Icon aria-hidden="true" className="sidebar__nav-icon" stroke={1.7} />
+                  <span>{item.label}</span>
+                </a>
               );
             })}
           </nav>

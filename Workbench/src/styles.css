@@ -735,6 +735,19 @@ h3 {
   margin-top: 8px;
 }
 
+.sidebar__section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: 16px 12px 6px;
+}
+
+.sidebar__nav--external {
+  margin-top: 0;
+}
+
 .sidebar__nav-item {
   display: flex;
   align-items: center;
