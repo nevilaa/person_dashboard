@@ -1,0 +1,5 @@
+dist-app/
+node_modules/
+assets/icon.icns
+assets/*.png
+*.dmg

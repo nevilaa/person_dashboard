@@ -1,0 +1,16 @@
+{
+  "name": "personal-ai-workbench-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:client": "cd ../Workbench && npx vite build",
+    "stage": "node build-app.mjs",
+    "dmg": "npm run build:client && node build-app.mjs && cd dist-app && npx electron-builder --mac dmg",
+    "dir": "npm run build:client && node build-app.mjs && cd dist-app && npx electron-builder --mac dir"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  }
+}
