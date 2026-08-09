@@ -42,6 +42,8 @@ const FORMAL_WIKI_SECTIONS = new Set([
   "conflicts",
   "diagnoses",
   "frameworks",
+  // Obsidian vaults that keep knowledge pages under wiki/pages/**.
+  "pages",
   "questions",
   "sources",
   "topics",
@@ -673,7 +675,7 @@ async function buildDocument(file, vaultRoot, errors) {
     section: classification.section,
     kind: classification.kind,
     title,
-    type: frontmatter.type ?? null,
+    type: frontmatter.type ?? frontmatter.category ?? null,
     status: frontmatter.status ?? null,
     tags: Array.isArray(frontmatter.tags)
       ? frontmatter.tags.filter((tag) => tag != null).map(String)

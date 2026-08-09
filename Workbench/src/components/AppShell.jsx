@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   IconBrandTiktok,
-  IconBooks,
   IconBulb,
   IconClipboardList,
   IconCommand,
@@ -26,7 +25,6 @@ const primaryNavigation = [
   { to: "/graph", label: "知识星图", icon: IconTopologyStar3 },
   { to: "/wiki", label: "Wiki 层", icon: IconLibrary },
   { to: "/materials", label: "素材层", icon: IconStack2 },
-  { to: "/books", label: "书架", icon: IconBooks },
   { to: "/daily-hot", label: "每日热点", icon: IconRadar2 },
   ...(localWorkbench
     ? [{ to: "/social-insights", label: "社媒洞察", icon: IconSocial }]
