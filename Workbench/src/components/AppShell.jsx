@@ -9,6 +9,7 @@ import {
   IconHome,
   IconLibrary,
   IconMenu2,
+  IconRadar,
   IconRadar2,
   IconSearch,
   IconSettings,
@@ -39,6 +40,11 @@ const externalLinks = [
     href: "https://nevilaa.github.io/",
     label: "财报研究 · 思航",
     icon: IconExternalLink,
+  },
+  {
+    href: "https://nevilaa.github.io/ai-news-radar/",
+    label: "AI 雷达",
+    icon: IconRadar,
   },
 ];
 
